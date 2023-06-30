@@ -18,6 +18,7 @@ Known specific things:
 - Piping data from a file is problematic, not only because that leaves env traces in the file system, but also because if a command also needs data piped via stdin, we have a problem because my app doesn't know the data is finished if you pipe two files. Doing so via another program, that program can send the CTRL+D itself and the next data will go to the next program, but via the shell it just doesn't work. My thought is to add a flag with a value like `--stop-on [end_of_file_identifier]` so that a `// EOF` comment or the like can tell it to leave the rest for the next app.
 
 ## Licensing
+[![CLA assistant](https://cla-assistant.io/readme/badge/alt-jero/ApplyEnv)](https://cla-assistant.io/alt-jero/ApplyEnv)  
 In looking a bit into the licensing aspect of open source projects and contributions, I've found out that there's quite a bit of legal stuff to consider. As such, I've adapted a contributor license agreement based on those used by Goole, The Apache Foundation, and Okta, found here: [Individual Contributor License Agreement](CLA.INDIVIDUAL.md) and summarized as follows:
 
 1. Your contribution remains yours, but you grant the right to use, modify, redistribute, [...], and sublicense it.
