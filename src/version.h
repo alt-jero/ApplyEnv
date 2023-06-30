@@ -1,0 +1,1 @@
+#define CLI_BANNER "applyenv 1.0.0"
