@@ -25,7 +25,7 @@
 #define INITIAL_BUFFER_SIZE 1024
 
 int binaryPathPosition = 1;
-bool hide_input = true;
+bool hide_input = false;
 bool parser_v2 = false;
 
 int test_all() {
@@ -52,9 +52,9 @@ void parse_args(int argc, char *argv[]) {
             // Print help information and exit
             exit(test_all());
         }
-        if (strcmp(argv[i], "--show") == 0) {
+        if (strcmp(argv[i], "--hide") == 0) {
             // Disable input hiding
-            hide_input = false;
+            hide_input = true;
             continue;
         }
         if (strcmp(argv[i], "--parser-v2") == 0) {
